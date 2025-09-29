@@ -1,8 +1,7 @@
-# IG Following Check
-Web app to check which profiles do not follow you back on Instagram. Unlike other applications this includes a live interface with direct links to profiles user is following after uploading their data--streamlining the process by letting users readily cross-reference accounts not following them back. 
+# IG Unfollowers
+Web app to check profiles not following you back on Instagram. Includes an interface with direct links to profiles user follows after uploading their data--streamlining the process by letting users readily cross-reference accounts not following them back. 
 
-Thi method works for both private and non-private accounts. As of August 19, 2025, this product does not break Instagram TOS as there is no scraping involved nor logging in involed. This tool is **not** affiliated nor associated with Instagram.
- 
+This method works for both private and non-private accounts. As of August 19, 2025, this product does not break Instagram TOS as there is no scraping involved nor logging in involed. This tool is **not** affiliated nor associated with Instagram.
 
 This program is deployed on Streamlit, view web app here
 
@@ -16,5 +15,4 @@ This program is deployed on Streamlit, view web app here
 6) Ensure files names are `following.html` and `followers.html`
 
 ## Deploying Locally
-1) Run
-'''streamlit run core.py'''
+1) Run `streamlit run core.py`
