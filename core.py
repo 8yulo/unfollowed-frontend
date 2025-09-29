@@ -27,8 +27,9 @@ def extract_not_following_back(followers_file, following_file):
     unfollower_count = 0
     not_following_back = following - followers
 
-    st.markdown(f"<h4 style='text-align: center; color: grey; text-decoration: bold;'>There are {len(not_following_back)} users not following you back:</div>", unsafe_allow_html=True)
     if not_following_back:
+        st.markdown(f"<h4 style='text-align: center; color: grey; text-decoration: bold;'>There are {len(not_following_back)} users not following you back:</div>", unsafe_allow_html=True)
+
         for username in not_following_back:
             unfollower_count += 1
             container = st.container(border=True)
@@ -41,7 +42,7 @@ def extract_not_following_back(followers_file, following_file):
                     min-height:48px;
                 ">
                   <h4 style="
-                      width:44px;
+                      padding-left: 1rem;
                       margin:0;
                       text-align:right;
                       color:grey;
@@ -53,16 +54,24 @@ def extract_not_following_back(followers_file, following_file):
                       margin:0;
                       text-align:center;
                   ">
-                    <a href="/user/{username}" target="_self" class="username-link">
-                      🪦 @{username}
+                    <a href="https://www.instagram.com/{username}" target="_self" class="username-link">
+                      @{username}
                     </a>
                   </h4>
+                
+                 <h4 style="
+                      position: absolute;
+                      right: 0;
+                      transform: translateY(-50%);
+                      text-align:right;
+                      color:grey;
+                  ">🪦</h4>
                 </div>
                 """,
                 unsafe_allow_html=True
             )
     else:
-            print("Everyone is following you back!")
+         st.markdown(f"<h4 style='text-align: center; color: grey; text-decoration: bold;'>Everyone is following you back!</div>", unsafe_allow_html=True)
     return not_following_back
     
 def file_upload():
@@ -83,8 +92,8 @@ def file_upload():
         st.warning("Please upload the required HTML files.")
 
 def main():
-    st.markdown("<h1 style='text-align: center; color: black;'>IG Unfollower Analysis</h1>", unsafe_allow_html=True)
-    st.markdown("<h4 style='text-align: center; color: grey;'>check profiles that don't follow you back 😢</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>IG Unfollowers</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color: grey;'>find profiles that don't follow you back 😢</h1>", unsafe_allow_html=True)
     file_upload()
 
 if __name__ == "__main__":
