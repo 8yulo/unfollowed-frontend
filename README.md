@@ -7,10 +7,14 @@ Thi method works for both private and non-private accounts. As of August 19, 202
 This program is deployed on Streamlit, view web app here
 
 
-## Steps to Check Unfollowers
+## On Web App
 1) Make sure you are logged into browser
 2) Head to: More -> Your Activity -> Download your Information
 3) While on Accounts Center: Download or Transfer information -> Select Account
 4) Once you select account: Some of your information -> Followers & Following -> Download to device -> Date range
 5) Make sure range is set to "all time" as Instagram will only include followers/following from the time range you've selected  
 6) Ensure files names are `following.html` and `followers.html`
+
+## Deploying Locally
+1) Run
+'''streamlit run core.py'''
