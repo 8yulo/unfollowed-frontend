@@ -1,17 +1,19 @@
 import re
 import streamlit as st
-import pandas as pd
 from io import StringIO
 
 st.set_page_config(layout="wide")
 
-def extract_usernames(file_path): 
+def extract_usernames(file_path, has_links=False): 
     file_data = file_path.read()
     stringio = StringIO(file_path.getvalue().decode('utf-8'))
     content = stringio.read()
 
     #extract usernames from profile links
-    pattern = r'https://www.instagram.com/([a-zA-Z0-9_.]+)'
+    if has_links:
+        pattern = r'https://www.instagram.com/_u/([a-zA-Z0-9_.]+)'
+    else:
+        pattern = r'([a-zA-Z0-9_.]+)'
     
     #find all user & return as a set
     usernames = set(re.findall(pattern, content))
@@ -20,8 +22,8 @@ def extract_usernames(file_path):
 
 def extract_not_following_back(followers_file, following_file):
     # Reads content of files
-    followers = extract_usernames(followers_file)
-    following = extract_usernames(following_file)
+    followers = extract_usernames(followers_file, has_links=False)
+    following = extract_usernames(following_file, has_links=True)
 
     # Find users not following back
     unfollower_count = 0
@@ -32,6 +34,7 @@ def extract_not_following_back(followers_file, following_file):
 
         for username in not_following_back:
             unfollower_count += 1
+            print(f"{unfollower_count}: {username}\n")
             container = st.container(border=True)
             with container:
                 st.markdown(
@@ -92,8 +95,8 @@ def file_upload():
         st.warning("Please upload the required HTML files.")
 
 def main():
-    st.markdown("<h1 style='text-align: center; color: black;'>IG Unfollowers</h1>", unsafe_allow_html=True)
-    st.markdown("<h4 style='text-align: center; color: grey;'>find profiles that don't follow you back 😢</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; color: black;'>Who Unfollowed Me?</h1>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center; color: grey;'>find profiles that don't follow you back (no login required) 😢</h1>", unsafe_allow_html=True)
     file_upload()
 
 if __name__ == "__main__":
