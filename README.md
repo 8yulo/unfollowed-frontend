@@ -1,7 +1,7 @@
 # Who Unfollowed Me on Instagram?
 Web app to check profiles not following you back on Instagram. Includes an interface with direct links to profiles user follows after uploading their data--streamlining the process by letting users readily cross-reference accounts not following them back. 
 
-This method works for both private and non-private accounts. As of August 19, 2025, this product does not break Instagram TOS as there is no scraping involved nor logging in involed. This tool is **not** affiliated nor associated with Instagram.
+This method works for both private and non-private accounts. As of August 19, 2025, this product does not break Instagram TOS as there is no scraping nor logging in involed. This tool is **not** affiliated nor associated with Instagram.
 
 This program is deployed on Streamlit, view web app here
 
