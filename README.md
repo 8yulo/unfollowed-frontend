@@ -1,9 +1,7 @@
-# IG Unfollowers
-Web app to check profiles not following you back on Instagram. Includes an interface with direct links to profiles user follows after uploading their data--streamlining the process by letting users readily cross-reference accounts not following them back. 
+# Unfollowed (for IG)
+Web app to check profiles not following you back on Instagram. Includes dashboard for seamlessly cross-referencing accounts not following them back. 
 
-This method works for both private and non-private accounts. As of August 19, 2025, this product does not break Instagram TOS as there is no scraping involved nor logging in involed. This tool is **not** affiliated nor associated with Instagram.
-
-This program is deployed on Streamlit, view web app here
+This method works for both private and non-private accounts. As of January 12, 2026, this product does not break Instagram TOS as there is no scraping nor logging in involed. This tool is **not** affiliated nor associated with Instagram nor Meta.
 
 
 ## Downloading IG Account Data
@@ -19,6 +17,6 @@ This program is deployed on Streamlit, view web app here
 3) Upload files onto app
 
 ## Deploying Locally
-1) On terminal: run `streamlit run core.py`
+1) On terminal: run `npm run dev`
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
