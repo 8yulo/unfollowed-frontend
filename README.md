@@ -21,11 +21,9 @@ This method works for both private and non-private accounts. As of January 12, 2
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## License 
-Copyright © 2026 Janelle Yulo
+## License
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0).
+You may run, modify, and self-host this software. If you offer it as a networked
+service, you must make the corresponding source code available under the same license.
 
-This code is provided for personal, educational, and non-commercial use only.
-
-You may view, run, and modify the code for private use. You may not sell, sublicense, host as a paid service, or use this code in a commercial product without explicit written permission.
-
-For commercial licensing, email: contact@janelle.dev
+For alternative commercial licensing, email: contact@janelle.dev
