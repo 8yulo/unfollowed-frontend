@@ -20,3 +20,12 @@ This method works for both private and non-private accounts. As of January 12, 2
 1) On terminal: run `npm run dev`
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## License 
+Copyright © 2026 Janelle Yulo
+
+This code is provided for personal, educational, and non-commercial use only.
+
+You may view, run, and modify the code for private use. You may not sell, sublicense, host as a paid service, or use this code in a commercial product without explicit written permission.
+
+For commercial licensing, email: contact@janelle.dev
