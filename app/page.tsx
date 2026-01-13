@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { extractUsernamesFromHtml, setDifference, readFileText } from "@/helpers/helpers";
+import { extractUsernames, setDifference, readFileText } from "@/helpers/helpers";
 
 import { TopGradientBar, BackgroundGlow } from "@/components/Background";
 import Header from "@/components/Header";
@@ -39,11 +39,11 @@ export default function Home() {
   }
 
   function compare() {
-    const followers = extractUsernamesFromHtml(followersText ?? "");
-    const following = extractUsernamesFromHtml(followingText ?? "");
+    const followers = extractUsernames(followersText ?? "");
+    const following = extractUsernames(followingText ?? "");
     const diff = Array.from(setDifference(following, followers)).sort();
     setResults(diff);
-    setStatusText(`Found ${diff.length} unfollowers`);
+    setStatusText(`Found ${diff.length} accounts not following you back.`);
   }
 
   function reset() {
@@ -57,14 +57,14 @@ export default function Home() {
   }
 
   return (
-    <div className="shadow-soft mt-10 rounded-3xl border border-neutral-200 bg-white/70 p-6 backdrop-blur sm:p-8">
+    <div className="relative mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
       <TopGradientBar />
       <BackgroundGlow />
 
       <main className="mx-auto max-w-5xl px-4 py-10">
         <Header />
 
-        <section className="mt-10 rounded-3xl border bg-white p-6">
+        <section className="shadow-soft mt-10 rounded-3xl border border-neutral-200 bg-white/80 p-5 backdrop-blur sm:p-8">
           <div className="grid gap-6 lg:grid-cols-2">
             <UploadCard
               title="Upload followers HTML"
