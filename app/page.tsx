@@ -20,6 +20,7 @@ export default function Home() {
   const [results, setResults] = useState<string[]>([]);
   const [search, setSearch] = useState("");
   const [statusText, setStatusText] = useState("Upload both files to continue.");
+  const [hasCompared, setHasCompared] = useState(false);
 
   const ready = !!followersText && !!followingText;
 
@@ -43,6 +44,7 @@ export default function Home() {
     const following = extractUsernames(followingText ?? "");
     const diff = Array.from(setDifference(following, followers)).sort();
     setResults(diff);
+    setHasCompared(true);
     setStatusText(`Found ${diff.length} accounts not following you back.`);
   }
 
@@ -82,7 +84,7 @@ export default function Home() {
 
           <UserActions ready={ready} statusText={statusText} onCompare={compare} onReset={reset} />
 
-          <Results users={filtered} search={search} onSearchChange={setSearch} />
+          <Results users={filtered} search={search} onSearchChange={setSearch} hasData={hasCompared}/>
         </section>
         <ExplanationSection/>
         <Footer />
