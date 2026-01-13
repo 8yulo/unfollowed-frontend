@@ -26,4 +26,4 @@ This project is licensed under the GNU Affero General Public License v3.0 (AGPL-
 You may run, modify, and self-host this software. If you offer it as a networked
 service, you must make the corresponding source code available under the same license.
 
-For alternative commercial licensing, contact: contact@janelle.dev
+For alternative commercial licensing, email: contact@janelle.dev
