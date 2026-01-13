@@ -1,7 +1,7 @@
 # Unfollowed (for IG)
-Web app to check profiles not following you back on Instagram. Includes dashboard for seamlessly cross-referencing accounts not following them back. 
+Web app to check profiles not following you back on Instagram. Created over the span of a week, includes an intuitive dashboard for seamlessly cross-referencing accounts. 
 
-This method works for both private and non-private accounts. As of January 12, 2026, this product does not break Instagram TOS as there is no scraping nor logging in involed. This tool is **not** affiliated nor associated with Instagram nor Meta.
+This method works for both private and non-private accounts. As of January 12, 2026, this product does not break Instagram TOS as there is no scraping nor logging in involved. This tool is **not** affiliated nor associated with Instagram™ or Meta Platforms Inc.
 
 
 ## Downloading IG Account Data
