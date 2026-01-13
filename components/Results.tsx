@@ -45,7 +45,7 @@ export default function Results({
       {/* Results list container */}
       <div className="theme-surface mt-4 overflow-hidden rounded-2xl border">
         {/* List header */}
-        <div className="flex items-center justify-between border-b theme-border-divider bg-[var(--surface-muted)] px-4 py-3">
+        <div className="flex items-center justify-between border-b theme-surface bg-[var(--surface-muted)] px-4 py-3">
           <p className="text-sm theme-text-primary">
             <span className="font-medium">{users.length}</span>{" "}
             <span className="theme-text-tertiary">
@@ -64,14 +64,16 @@ export default function Results({
         </div>
         {/* List or empty states */}
         {users.length > 0 ? (
-          <ul className="divide-y theme-border-divider">
+          <ul className="divide-y divide-[var(--border-divider)]">
             {users.map((username, idx) => (
               <li key={username}>
                 <div className="relative flex items-center gap-3 px-4 py-3">
                 {/* {<div className="absolute inset-y-2 left-2 w-1 rounded-full bg-gradient-to-b from-fuchsia-500 via-pink-500 to-amber-400" /> */}
 
-                  <div className="w-10 text-right text-sm font-semibold tabular-nums theme-text-tertiary">
-                    {idx + 1}
+                  <div className="flex items-center justify-center">
+                    <span className="theme-badge inline-flex h-6 w-6 items-center justify-center rounded-md text-xs font-semibold tabular-nums">
+                      {idx + 1}
+                    </span>
                   </div>
 
                   <div className="min-w-0 flex-1 text-left">

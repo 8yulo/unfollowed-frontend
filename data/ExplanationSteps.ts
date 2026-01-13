@@ -14,7 +14,7 @@ const ExplanationSteps: ExplanationStep[] = [
     parts: [
       { kind: "text", value: "Reads profile links like " },
       { kind: "mono", value: "instagram.com/username" },
-      { kind: "text", value: "." },
+      { kind: "text", value: " from uploaded files." },
     ],
   },
   {

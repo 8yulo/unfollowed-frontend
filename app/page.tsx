@@ -9,6 +9,7 @@ import UploadCard from "@/components/UploadCard";
 import UserActions from "@/components/UserActions";
 import Results from "@/components/Results";
 import ExplanationSection from "@/components/ExplanationSection";
+import InstructionsSection from "@/components/InstructionsSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -86,6 +87,7 @@ export default function Home() {
 
           <Results users={filtered} search={search} onSearchChange={setSearch} hasData={hasCompared}/>
         </section>
+        <InstructionsSection />
         <ExplanationSection/>
         <Footer />
       </main>
