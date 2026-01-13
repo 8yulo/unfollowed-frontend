@@ -1,8 +1,111 @@
 @import "tailwindcss";
 
+/* Light Theme Variables */
 :root {
-  --background: #fff;
+  /* Base colors */
+  --background: #ffffff;
   --foreground: #171717;
+  
+  /* Surface colors */
+  --surface: #ffffff;
+  --surface-elevated: rgba(255, 255, 255, 0.8);
+  --surface-subtle: rgba(255, 255, 255, 0.7);
+  --surface-muted: #f5f5f5;
+  
+  /* Border colors */
+  --border: #e5e5e5;
+  --border-subtle: #f5f5f5;
+  --border-divider: #e5e5e5;
+  
+  /* Text colors */
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-tertiary: #737373;
+  --text-muted: #a3a3a3;
+  --text-inverse: #ffffff;
+  
+  /* Interactive colors */
+  --interactive-bg: #ffffff;
+  --interactive-bg-hover: #f5f5f5;
+  --interactive-bg-active: #e5e5e5;
+  --interactive-border: #e5e5e5;
+  --interactive-border-hover: #d4d4d4;
+  
+  /* Input colors */
+  --input-bg: #fafafa;
+  --input-bg-hover: #f5f5f5;
+  --input-border: #e5e5e5;
+  --input-border-focus: #a3a3a3;
+  --input-text: #171717;
+  --input-placeholder: #737373;
+  
+  /* Badge/Tag colors */
+  --badge-bg: #f5f5f5;
+  --badge-text: #525252;
+  
+  /* Status colors */
+  --status-success: #22c55e;
+  --status-inactive: #d4d4d4;
+  
+  /* Shadow */
+  --shadow-soft: 0 10px 30px -12px rgba(0, 0, 0, 0.18);
+  
+  /* Gradient overlay for dividers */
+  --divider-gradient: linear-gradient(to right, transparent, #e5e5e5, transparent);
+}
+
+/* Dark Theme Variables */
+.dark {
+  /* Base colors */
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  
+  /* Surface colors */
+  --surface: #171717;
+  --surface-elevated: rgba(23, 23, 23, 0.8);
+  --surface-subtle: rgba(23, 23, 23, 0.7);
+  --surface-muted: #262626;
+  
+  /* Border colors */
+  --border: #404040;
+  --border-subtle: #262626;
+  --border-divider: #404040;
+  
+  /* Text colors */
+  --text-primary: #fafafa;
+  --text-secondary: #d4d4d4;
+  --text-tertiary: #a3a3a3;
+  --text-muted: #737373;
+  --text-inverse: #171717;
+  
+  /* Interactive colors */
+  --interactive-bg: #262626;
+  --interactive-bg-hover: #404040;
+  --interactive-bg-active: #525252;
+  --interactive-border: #404040;
+  --interactive-border-hover: #525252;
+  
+  /* Input colors */
+  --input-bg: rgba(38, 38, 38, 0.5);
+  --input-bg-hover: rgba(38, 38, 38, 0.7);
+  --input-border: #404040;
+  --input-border-focus: #525252;
+  --input-text: #fafafa;
+  --input-placeholder: #737373;
+  
+  /* Badge/Tag colors */
+  --badge-bg: #404040;
+  --badge-text: #d4d4d4;
+  
+  /* Status colors */
+  --status-success: #22c55e;
+  --status-inactive: #525252;
+  
+  /* Shadow */
+  --shadow-soft: 0 10px 30px -12px rgba(0, 0, 0, 0.4);
+  
+  /* Gradient overlay for dividers */
+  --divider-gradient: linear-gradient(to right, transparent, #404040, transparent);
 }
 
 @theme inline {
@@ -12,15 +115,84 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Semantic utility classes */
+.theme-surface {
+  background-color: var(--surface);
+  border-color: var(--border);
+}
+
+.theme-surface-elevated {
+  background-color: var(--surface-elevated);
+  border-color: var(--border);
+}
+
+.theme-surface-subtle {
+  background-color: var(--surface-subtle);
+  border-color: var(--border);
+}
+
+.theme-text-primary {
+  color: var(--text-primary);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-border {
+  border-color: var(--border);
+}
+
+.theme-border-divider {
+  border-color: var(--border-divider);
+}
+
+.theme-interactive {
+  background-color: var(--interactive-bg);
+  border-color: var(--interactive-border);
+  color: var(--text-primary);
+}
+
+.theme-interactive:hover {
+  background-color: var(--interactive-bg-hover);
+  border-color: var(--interactive-border-hover);
+}
+
+.theme-input {
+  background-color: var(--input-bg);
+  border-color: var(--input-border);
+  color: var(--input-text);
+}
+
+.theme-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.theme-input:focus {
+  border-color: var(--input-border-focus);
+  background-color: var(--input-bg-hover);
+}
+
+.theme-badge {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.theme-shadow {
+  box-shadow: var(--shadow-soft);
 }

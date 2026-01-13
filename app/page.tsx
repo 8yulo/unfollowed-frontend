@@ -66,7 +66,7 @@ export default function Home() {
       <main className="mx-auto max-w-5xl px-4 py-10">
         <Header />
 
-        <section className="shadow-soft mt-10 rounded-3xl border border-neutral-200 bg-white/80 p-5 backdrop-blur sm:p-8">
+        <section className="theme-surface-elevated theme-shadow mt-10 rounded-3xl border p-5 backdrop-blur sm:p-8">
           <div className="grid gap-6 lg:grid-cols-2">
             <UploadCard
               title="Upload followers HTML"

@@ -6,10 +6,10 @@ type Props = {
 
 export default function ExplanationCard({ card }: Props) {
   return (
-    <div className="rounded-2xl border border-neutral-200 bg-white p-4">
-      <p className="text-sm font-semibold">{card.title}</p>
+    <div className="theme-surface rounded-2xl border p-4">
+      <p className="text-sm font-semibold theme-text-primary">{card.title}</p>
 
-      <p className="mt-1 text-sm text-neutral-600">
+      <p className="mt-1 text-sm theme-text-secondary">
         {card.parts.map((part, i) => {
           if (part.kind === "mono") {
             return (

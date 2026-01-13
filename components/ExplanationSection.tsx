@@ -5,9 +5,9 @@ export default function ExplanationSection() {
   return (
     <section
       id="how"
-      className="shadow-soft mt-10 rounded-3xl border border-neutral-200 bg-white/70 p-6 backdrop-blur sm:p-8"
+      className="theme-surface-subtle theme-shadow mt-10 rounded-3xl border p-6 backdrop-blur sm:p-8"
     >
-      <h3 className="text-lg font-semibold">How It Works</h3>
+      <h3 className="text-lg font-semibold theme-text-primary">How It Works</h3>
 
       <div className="mt-3 grid gap-4 sm:grid-cols-3">
         {ExplanationSteps.map((step) => (
