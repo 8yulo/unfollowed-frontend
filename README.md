@@ -20,3 +20,5 @@ This program is deployed on Streamlit, view web app here
 
 ## Deploying Locally
 1) On terminal: run `streamlit run core.py`
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
